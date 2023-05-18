@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1/utils/routes.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -39,14 +40,20 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 40,
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      print("Hii Rishav");
+                      Navigator.pushNamed(context, MyRoutes.homeRoute);
                     },
-                    child: Text("Log in"),
-                    style: TextButton.styleFrom(),
+                    child: Text("Log in", style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                    ),
+                    ),
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(140, 40),
+                    ),
                   )
                 ],
               ),
